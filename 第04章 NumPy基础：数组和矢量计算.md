@@ -1334,7 +1334,7 @@ In [243]: %timeit np.random.normal(size=N)
 In [244]: np.random.seed(1234)
 ```
 
-numpy.random的数据生成函数使用了全局的随机种子。要避免全局状态，你可以使用numpy.random.RandomState，创建一个与其它隔离的随机数生成器：
+numpy.random的数据生成函数使用了全局的随机种子h。要避免全局状态，你可以使用numpy.random.RandomState，创建一个与其它隔离的随机数生成器：
 ```python
 In [245]: rng = np.random.RandomState(1234)
 
@@ -1351,7 +1351,7 @@ array([ 0.4714, -1.191 ,  1.4327, -0.3127, -0.7206,  0.8872,  0.8596,
 ![](http://upload-images.jianshu.io/upload_images/7178691-6ed04fae3d1178e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 4.7 示例：随机漫步
-我们通过模拟随机漫步来说明如何运用数组运算。先来看一个简单的随机漫步的例子：从0开始，步长1和－1出现的概率相等。
+我们通过模拟随机漫步来说明如何运用数组运算。先来看x一个简单的随机漫步的例子：从0开始，步长1和－1出现的概率相等。
 
 下面是一个通过内置的random模块以纯Python的方式实现1000步的随机漫步：
 ```python
