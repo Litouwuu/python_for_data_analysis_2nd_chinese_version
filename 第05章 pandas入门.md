@@ -813,7 +813,8 @@ b    1.0
 dtype: float64
 ```
 
-利用标签的切片运算与普通的Python切片运算不同，其末端是包含的：
+**利用标签的切片运算与普通的Python切片运算不同，其末端是包含的：**
+
 ```python
 In [125]: obj['b':'c']
 Out[125]:
@@ -1051,9 +1052,9 @@ g    NaN
 dtype: float64
 ```
 
-自动的数据对齐操作在不重叠的索引处引入了NA值。缺失值会在算术运算过程中传播。
+自动的数据对齐操作在不重叠的索引处引入了NA值。**缺失值会在算术运算过程中传播**。
 
-对于DataFrame，对齐操作会同时发生在行和列上：
+对于DataFrame，对齐操作会**同时发生在**行和列上：
 ```python
 In [155]: df1 = pd.DataFrame(np.arange(9.).reshape((3, 3)), columns=list('bcd'),
    .....:                    index=['Ohio', 'Texas', 'Colorado'])
@@ -1369,7 +1370,7 @@ Texas    0.09  0.28   0.77
 Oregon   1.25  1.01  -1.30
 ```
 
-之所以叫做applymap，是因为Series有一个用于应用元素级函数的map方法：
+之所以叫做applymap，是因为**Series有一个用于应用元素级函数的map方法**：
 ```python
 In [200]: frame['e'].map(format)
 Out[200]: 
@@ -1482,7 +1483,7 @@ Out[214]:
 1  1  7
 ```
 
-排名会从1开始一直到数组中有效数据的数量。接下来介绍Series和DataFrame的rank方法。默认情况下，rank是通过“为各组分配一个平均排名”的方式破坏平级关系的：
+排名会从1开始一直到数组中有效数据的数量。接下来介绍Series和DataFrame的rank方法。默认情况下，rank是通过“为各组分配一个平均排名”的**方式破坏平级关系**的：
 ```python
 In [215]: obj = pd.Series([7, -5, 7, 4, 2, 0, 4])
 In [216]: obj.rank()
